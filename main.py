@@ -1,5 +1,3 @@
-import re
-
 def count_words(text):
     return len(text.split())
 
@@ -8,15 +6,15 @@ def read_file():
         return file.read()
 
 def count_characters(content):
-    content = re.sub(r'[^a-zA-Z]', '', content)
-
+    
     count_chars = {}
     for char in content:
         char = char.lower()
-        if char in count_chars:
-            count_chars[char] += 1
-        else:
-            count_chars[char] = 1
+        if char.isalpha():
+            if char in count_chars:
+                count_chars[char] += 1
+            else:
+                count_chars[char] = 1
     return count_chars
 
 def sorted_list(count_characters):
