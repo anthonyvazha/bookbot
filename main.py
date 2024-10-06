@@ -17,13 +17,6 @@ def count_characters(content):
                 count_chars[char] = 1
     return count_chars
 
-def sorted_list(count_characters):
-    sort_list = []
-
-    for letter, frequency in count_chars.items():
-        sort_list += {}
-
-
 def print_ans(word_count,count_chars):
 
     sorted_count_chars = sorted(count_chars.items(), key=lambda item: item[1], reverse=True)
