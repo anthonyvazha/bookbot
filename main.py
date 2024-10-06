@@ -33,8 +33,9 @@ def print_report(word_count,count_chars):
 
 def main():
     content = read_file()
-    word_count = count_words(content)
-    count_chars = count_characters(content)
-    print_report(word_count, count_chars)
+    if content:
+        word_count = count_words(content)
+        count_chars = count_characters(content)
+        print_report(word_count, count_chars)
 
 main()
